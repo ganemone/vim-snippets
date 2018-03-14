@@ -25,8 +25,12 @@ endglobal
 ###########################################################################
 #                            TextMate Snippets                            #
 ###########################################################################
-snippet get "Get Elements"
-getElement${1/(T)|.*/(?1:s)/}By${1:T}${1/(T)|(I)|.*/(?1:agName)(?2:d)/}('$2')
+snippet const "const assignment"
+const $1 = $0
+endsnippet
+
+snippet let "let assignment"
+let $1 = $0
 endsnippet
 
 snippet '':f "object method string"
@@ -47,13 +51,6 @@ endsnippet
 
 snippet : "Object key key: 'value'"
 ${1:key}: ${2:"${3:value}"}${4:, }
-endsnippet
-
-snippet proto "Prototype (proto)"
-${1:class_name}.prototype.${2:method_name} = function`!p snip.rv = space_before_function_paren(snip)`(${3:first_argument}) {
-	${VISUAL}$0
-}`!p snip.rv = semi(snip)`
-
 endsnippet
 
 snippet fun "function (fun)" w
